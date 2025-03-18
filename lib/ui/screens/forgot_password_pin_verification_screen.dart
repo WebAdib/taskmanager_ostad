@@ -4,7 +4,6 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:taskmanager_ostad/ui/widgets/screen_background.dart';
 
 import 'login_screen.dart';
-import 'reset_password_screen.dart';
 
 class ForgotPasswordPinVerificationScreen extends StatefulWidget {
   const ForgotPasswordPinVerificationScreen({super.key});
@@ -102,7 +101,7 @@ class _ForgotPasswordPinVerificationScreenState
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const ResetPasswordScreen(),
+        builder: (context) => const LoginScreen(),
       ),
     );
   }

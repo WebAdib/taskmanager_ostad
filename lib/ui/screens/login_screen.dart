@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:taskmanager_ostad/ui/widgets/screen_background.dart';
 
 import 'forgot_password_verify_email_screen.dart';
+import 'main_bottom_nav_screen.dart';
 import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -54,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 SizedBox(height: 16),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: _onTapSignInButton,
                   child: const Icon(Icons.arrow_circle_right_outlined),
                 ),
                 SizedBox(height: 32),
@@ -106,6 +107,17 @@ class _LoginScreenState extends State<LoginScreen> {
       MaterialPageRoute(
         builder: (context) => const RegisterScreen(),
       ),
+    );
+  }
+
+  void _onTapSignInButton() {
+    // Navigate to the RegisterScreen
+    Navigator.pushAndRemoveUntil(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const MainBottomNavScreen(),
+      ),
+      (pre) => false,
     );
   }
 
